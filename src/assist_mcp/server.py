@@ -12,6 +12,7 @@ from typing import Any
 
 from mcp.server.fastmcp import FastMCP
 
+from . import __version__
 from .client import AssistClient, AssistError
 
 mcp = FastMCP(
@@ -25,6 +26,10 @@ mcp = FastMCP(
         "courses satisfy which university courses."
     ),
 )
+
+# FastMCP takes no version argument, and the underlying server falls back to
+# reporting the mcp SDK's version in the initialize response. Set ours.
+mcp._mcp_server.version = __version__
 
 client = AssistClient()
 
