@@ -3,8 +3,15 @@ name = "assist-mcp"
 version = "0.1.0"
 description = "MCP server exposing California ASSIST (assist.org) articulation agreements — no API key required"
 readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "M Hadi" }]
 requires-python = ">=3.10"
 dependencies = ["mcp>=1.2.0"]
+keywords = ["mcp", "assist", "articulation", "transfer", "california", "community-college"]
+
+[project.urls]
+Repository = "https://github.com/mhadifilms/assist-mcp"
+Issues = "https://github.com/mhadifilms/assist-mcp/issues"
 
 [project.scripts]
 assist-mcp = "assist_mcp.server:main"
